@@ -1,5 +1,7 @@
 #!/bin/bash -ex
 
+git config --global --add safe.directory /__w/threeSD/threeSD
+
 GITDATE="`git show -s --date=short --format='%ad' | sed 's/-//g'`"
 GITREV="`git show -s --format='%h'`"
 if [[ $GITHUB_REF == refs/tags/* ]]; then
