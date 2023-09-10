@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        image: ["linux-clang-format", "linux-fresh", "linux-mingw"]
-    container: citraemu/build-environments:${{ matrix.image }}
+        image: ["linux-clang-format", "linux-fresh"]
+    container: darkk98/threesd:${{ matrix.image }}
     steps:
       - uses: actions/checkout@v2
         with:
